@@ -32,6 +32,7 @@ function App() {
     setModalIsOpen(false);
   }
 
+
   async function handleSelectPlace(selectedPlace) {
     await updateUserPlaces([selectedPlace, ...userPlaces]);
 
@@ -76,7 +77,7 @@ function App() {
 
       setModalIsOpen(false);
     },
-    [userPlace, setUserPlaces]
+    [userPlaces, setUserPlaces]
   );
 
   function handleError() {
